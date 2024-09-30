@@ -1,0 +1,338 @@
+/* Font Definitions */
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  src: url(assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url(assets/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: "Source Code Pro Medium";
+  src: url(assets/fonts/static/SourceCodePro-Medium.ttf);
+}
+
+/* General Body Styles */
+body {
+  align-items: center;
+  background-color: #23272b;
+  border-radius: 5px;
+  display: flex;
+  font-family: 'Poppins Regular', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* App Container Styles */
+.app {
+  border-radius: 5px;
+  height: 425px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  width: 800px;
+}
+
+/* Title Bar Styles */
+.title-bar {
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: #31373c;
+  border-bottom: 1px solid #575d61;
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  color: #bfc2c4;
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+  z-index: 1;
+  -webkit-app-region: drag;
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.title-bar-left,
+.title-bar-right {
+  align-items: center;
+  display: flex;
+}
+
+.title-bar-icon {
+  margin-right: 10px;
+  scale: 1.075;
+}
+
+.title-bar-text {
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.title-bar-right {
+  color: rgba(255, 255, 255, 1);
+  margin-right: 20px;
+}
+
+.title-bar-button {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: opacity 0.25s;
+  -webkit-app-region: no-drag;
+}
+
+.title-bar-button:hover {
+  opacity: 0.25;
+}
+
+.xmark {
+  scale: 1.3;
+}
+
+.no-internet {
+  text-align: center;
+  padding: 20px;
+  color: red;
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.net-text {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  width: max-content;
+}
+.net-icon {
+  color: red;
+  font-size: 24px;
+  position: absolute;
+  top: -155%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  width: max-content;
+}
+
+/* Header and Subtitle Styles */
+.header-container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.app-header {
+  color: white;
+  font-family: "Poppins Bold", sans-serif;
+  font-size: 3.5em;
+  font-weight: 300;
+}
+
+.app-subtitle {
+  color: #ffffff;
+  font-family: "Poppins Light", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: -40px;
+}
+
+/* Version Text */
+.version-text {
+  font-family: 'Source Code Pro Medium';
+  letter-spacing: -1px;
+}
+
+/* Optimize Button */
+.optimize-button {
+  background-color: #23272b;
+  border: 1px solid #d2d5d8;
+  border-radius: 2px;
+  color: #bbb;
+  cursor: pointer;
+  font-family: 'Poppins Regular';
+  font-size: 1.25em;
+  height: 80px;
+  letter-spacing: 0.5px;
+  margin: 25px auto 0;
+  transition: all 0.3s;
+  width: 250px;
+}
+
+.optimize-button:hover {
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+/* Note Text */
+.note-text {
+  color: #f39c12;
+  font-family: 'Poppins Medium';
+  margin-top: 35px;
+}
+
+.note-icon {
+  margin-right: 10px;
+}
+
+/* Revert Menu Styles */
+.revert-menu-infotitle {
+  color: #bbb;
+  font-family: "Source Code Pro Medium";
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.revert-menu-subtitle {
+  color: #f39c12;
+  font-family: 'Poppins Medium';
+  left: 50%;
+  position: absolute;
+  top: 65%;
+  transform: translate(-50%);
+  width: max-content;
+}
+
+.no-internet-revert-text {
+  margin-top: 25px;
+}
+.revert-icon {
+  scale: 1.2;
+}
+
+.revert-button {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-internet-revert-button {
+  margin-top: 125px;
+}
+
+.revert-button:hover {
+  border-color: #f39c12;
+}
+
+/* Back Button */
+.back-button {
+  background-color: #23272b;
+  background: transparent;
+  border: 1px solid #d2d5d8;
+  color: #bbb;
+  cursor: pointer;
+  height: 16px;
+  left: 5%;
+  margin: auto;
+  padding: 10px;
+  position: absolute;
+  top: 15%;
+  transition: all 0.3s;
+  width: 16px;
+}
+
+.back-button:hover {
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.folder-button {
+  position: absolute;
+  top: 85%;
+  right: 5%;
+  color: #bbb;
+  cursor: pointer;
+  transition: all 0.3s;
+  scale: 1.25;
+}
+
+.folder-button:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: #f39c12;
+} 
+
+.info-icon {
+  margin-right: 10px;
+}
+
+
+
+/* Loading Indicator Styles */
+.loading-indicator {
+  display: inline-block;
+  margin-left: 10px;
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #f39c12;
+  width: 14px;
+  height: 14px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Disable Button Styles */
+.optimize-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.output {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #bbb;
+  letter-spacing: 2px;
+  animation: appear 1s forwards;
+  width: 300px;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.revert-output {
+  width: max-content;
+}
+
+@keyframes appear {
+  0% {opacity: 0;}
+
+  100% {opacity: 1;}
+}
